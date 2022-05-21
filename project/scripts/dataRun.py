@@ -260,7 +260,7 @@ class Quadrotor():
         # u_1R = -k1 * np.sign(s_z)
 
         ############### Control law ###############################
-        u_1 = -(lambda1 * e_zdot - self.acc_d[2, 0] - self.g) / denom + u_1R / denom
+        u_1 = -(lambda1 * e_zdot - self.acc_d[2, 0] - self.g) / denom + u_1R * self.m
 
 
         ######################################### Desired r (phi) and p (theta) from x and y ##########################################
